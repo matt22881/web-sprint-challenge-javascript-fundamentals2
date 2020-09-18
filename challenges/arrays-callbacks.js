@@ -71,10 +71,9 @@ The zoos want to display both the scientific name and the animal name in front o
 */
 const displayNames = []
 zooAnimals.forEach(function (item) {
-  displayNames.push(
-    `Name: ${this.animal_name}, Scientific: ${this.scientific_name}`
-  )
+  displayNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}`)
 });
+
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -127,15 +126,12 @@ let consume = function (a, b, cb) {
  * Create a function named multiply that returns the product of two numbers 
  * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
  */
-const add = function (a, b) {
-  return a + b;
-}
-const multiply = function (a, b) {
-  return a * b;
-}
-const greeting = function (first, last) {
-  return `Hello, ${first} ${last}, nice to meet you!`;
-}
+
+const add = (a, b) => a + b;
+
+const multiply = (a, b) => a * b;
+
+const greeting = (first, last) => `Hello, ${first} ${last}, nice to meet you!`;
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 console.log(consume(2, 2, add)); // 4
